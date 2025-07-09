@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    color: black;
+}
+
+body {
+  font-family: 'inter', sans-serif;
+}
+
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    color: white;
+    background: url('./public/bg.jpg') center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 15%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    all: unset;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hero-content {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 12px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.hero-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.secpage {
+    padding: 0 15%;
+}
+
+.story {
+    padding-top: 12%;
+    padding-bottom: 10%;
+    border-bottom: 2px solid;
+    text-align: center;
+}
+
+.story h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.story p {
+    width: 52%;
+    margin: auto;
+    margin-bottom: 8%;
+}
+
+.story a{
+    all: unset;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: medium;
+    position: relative;
+}
+
+.story a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.story a:hover::after {
+    width: 100%;
+}
+
+.productsection {
+    padding-top: 12%;
+    padding-bottom: 10%;
+    border-bottom: 2px solid;
+}
+
+.productsection h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.product {
+    text-align: center;
+}
+
+.product div {
+    height: 400px;
+    width: 320px;
+    overflow: hidden;
+}
+
+.product div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    scale: 1.2;
+}
+
+.product div img:hover {
+    scale: 1.0;
+}
+
+.product h4 {
+    margin-top: 8px;
+    line-height: normal;
+}
+
+.product h5 {
+    margin-top: 2px;
+}
+
+.productsection button {
+    background: transparent;
+    padding: 10px 28px;
+    font-size: medium;
+    margin-top: 40px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.productsection button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btndiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter {
+    padding-top: 12%;
+    padding-bottom: 10%;
+    text-align: center;
+}
+
+.newsletter h4 {
+    font-size: medium;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+form {
+    margin-top: 10px;
+}
+
+form input {
+    padding: 8px 20px;
+    border: 2px solid black;
+    font-size: medium;
+    width: 320px;
+    margin-right: 2px;
+}
+
+form button {
+    background: transparent;
+    padding: 8px 26px;
+    font-size: medium;
+    margin-top: 12px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    background: #000;
+    color: white;
+    padding: 40px 15%;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-column h2,
+.footer-column h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.footer-column p,
+.footer-column ul li {
+    margin-bottom: 8px;
+    opacity: 0.85;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    opacity: 0.6;
+}
+
+
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 24px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .products {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .product div {
+        height: 340px;
+        width: 280px;
+    }
+
+    .secpage {
+        padding: 0 10%;
+    }
+
+    .story p {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 8%;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .hero-content {
+        padding-bottom: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .footer-column h2, .footer-column h3 {
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        text-align: left;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .product div {
+        width: 100%;
+        height: auto;
+    }
+
+    .productsection h2,
+    .story h2 {
+        font-size: 22px;
+    }
+
+    .newsletter form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
